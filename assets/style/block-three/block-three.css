@@ -21,7 +21,7 @@
   transition: color .2s ease, background-color .2s ease;
 }
 
-.block-three__text_size_big {
+.block-three__accent-text {
   font-weight: 700;
   font-size: 56px;
 }
@@ -35,7 +35,7 @@
     padding: 24px 26px 32px 26px;
   }
 
-  .block-three__text_size_big {
+  .block-three__accent-text {
     font-size: 40px;
   }
 }
@@ -57,7 +57,7 @@
     border-radius: 12px;
   }
 
-  .block-three__text_size_big {
+  .block-three__accent-text {
     font-size: 26px;
   }
 }
@@ -72,7 +72,7 @@
     border-radius: 8px;
   }
 
-  .block-three__text_size_big {
+  .block-three__accent-text {
     font-size: 16px;
   }
 }
