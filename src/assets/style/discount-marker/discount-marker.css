@@ -1,0 +1,73 @@
+.discount-marker {
+  position: absolute;
+  z-index: 3;
+  width: 88px;
+  height: 88px;
+  padding: 24px 0 25px 0;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 39px;
+  color: var(--text-white, #ffffff);
+  background-color: #ffbd13;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.discount-marker_position_top-left {
+  top: 20px;
+  left: 20px;
+}
+
+.discount-marker_position_bottom-right {
+  bottom: 20px;
+  right: 20px;
+}
+
+.discount-marker_position_bottom-left {
+  bottom: 20px;
+  left: 20px;
+}
+
+@media (max-width: 1750px) {
+  .discount-marker_position_top-left {
+    top: 10px;
+    left: 10px;
+  }
+  
+  .discount-marker_position_bottom-right {
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .discount-marker_position_bottom-left {
+    bottom: 10px;
+    left: 10px;
+  }
+}
+
+@media (max-width: 950px) {
+  .discount-marker {
+    width: 50px;
+    height: 50px;
+    padding: 13px 0 16px 0;
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
+
+@media (max-width: 650px) {
+  .promo__discount-marker_position_top-left {
+    top: 5px;
+    left: 5px;
+  }
+  
+  .promo__discount-marker_position_bottom-right {
+    bottom: 5px;
+    right: 5px;
+  }
+
+  .promo__discount-marker_position_bottom-left {
+    bottom: 5px;
+    left: 5px;
+  }
+}

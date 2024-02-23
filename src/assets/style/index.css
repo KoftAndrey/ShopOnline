@@ -1,0 +1,31 @@
+@import url('normalize/normalize.css');
+
+@import url('vars/vars.css');
+
+@import url('global/global.css');
+
+@import url('header/header.css');
+
+@import url('promo/promo.css');
+
+@import url('profitable/profitable.css');
+
+@import url('footer/footer.css');
+
+@import url('block-one/block-one.css');
+@import url('block-two/block-two.css');
+@import url('block-three/block-three.css');
+@import url('block-four/block-four.css');
+@import url('block-five/block-five.css');
+@import url('block-six/block-six.css');
+@import url('discount-marker/discount-marker.css');
+
+@import url('product-card/product-card.css');
+
+@import url('articles/articles.css');
+@import url('breadcrumbs/breadcrumbs.css');
+@import url('article-link/article-link.css');
+@import url('pagination/pagination.css');
+
+@import url('article-block/article-block.css');
+@import url('article/article.css');

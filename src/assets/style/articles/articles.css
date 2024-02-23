@@ -1,0 +1,35 @@
+.articles {
+  margin: 0 0 100px 0;
+}
+
+.articles__container {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  column-gap: 30px;
+}
+
+.articles__breadcrumbs {
+  grid-column: 1 / 16;
+  margin: 35px 0 80px 0;
+}
+
+.articles__list {
+  margin: 0 0 50px 0;
+  grid-column: 2 / 15;
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 50px 30px;
+}
+
+.articles__item:nth-child(odd) {
+  grid-column: 1 / 7;
+}
+
+.articles__item:nth-child(even){
+  grid-column: 8 / 14;
+}
+
+.articles__pagination {
+  grid-column: 1 / 17;
+}
