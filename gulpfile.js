@@ -1,7 +1,13 @@
 import gulp from 'gulp';
 import browserSync from 'browser-sync';
+import sassPkg from 'sass';
+import gulpSass from 'gulp-sass';
 import gulpCssimport from 'gulp-cssimport';
 import {deleteAsync} from 'del';
+
+const prepros = true;
+
+const sass = gulpSass(sassPkg);
 
 // tasks
 export const html = () => gulp
@@ -9,13 +15,23 @@ export const html = () => gulp
   .pipe(gulp.dest('dist'))
   .pipe(browserSync.stream());
 
-export const css = () => gulp
-  .src('src/assets/style/index.css')
-  .pipe(gulpCssimport({
-    matchPattern: '*.css',
-  }))
-  .pipe(gulp.dest('dist/css'))
-  .pipe(browserSync.stream());
+export const style = () => {
+  if (prepros) {
+    return gulp
+      .src('src/assets/style/**/*.scss')
+      .pipe(sass().on('error', sass.logError))
+      .pipe(gulp.dest('dist/css'))
+      .pipe(browserSync.stream());
+  }
+
+  return gulp
+    .src('src/assets/style/index.css')
+    .pipe(gulpCssimport({
+      matchPattern: '*.css',
+    }))
+    .pipe(gulp.dest('dist/css'))
+    .pipe(browserSync.stream());
+}
 
 export const js = () => gulp
   .src('src/assets/script/*.js')
@@ -45,21 +61,19 @@ export const server = () => {
   });
 
   gulp.watch('./src/**/*.html', html);
-  gulp.watch('./src/assets/style/**/*.css', css);
+  gulp.watch(prepros ? './src/assets/style/**/*.scss' : './src/assets/style/**/*.css', style);
   gulp.watch('./src/assets/script/**/*.js', js);
   gulp.watch(['./src/fonts/**/*', './src/assets/style/**/*.{png,jpg,jpeg,svg,webp}'], copy);
 };
 
 export const clear = (done) => {
-  deleteAsync([path.dist.base], {
-    force: true,
-  });
+  deleteAsync(['dist/**/*', 'dist'], {force: true});
   done();
 };
 
 
 // run
-export const base = gulp.parallel(html, css, js, copy);
+export const base = gulp.parallel(html, style, js, copy);
 
 export const build = gulp.series(clear, base);
 

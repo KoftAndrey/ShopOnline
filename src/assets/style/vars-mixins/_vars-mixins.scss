@@ -1,0 +1,54 @@
+// vars
+$text-white: #fff;
+$dark-blue: #3670c7;
+$red: #ff0000;
+$black: #2d2d2d;
+$dark-grey: #525252;
+$grey: #8f8f8f;
+$light-grey: #E8E8E8;
+
+
+// templates
+%inblockImage {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+// mixins
+@mixin font($name, $weight) {
+  font: {
+    family: $name;
+    weight: $weight;
+    display: swap;
+  }
+  src: url('../assets/fonts/#{ $name }-#{ $weight }.woff2') format('woff2'),
+       url('../assets/fonts/#{ $name }-#{ $weight }.woff') format('woff'),
+}
+
+@mixin _1700 {
+  @media (max-width: 1700px) {
+    @content;
+  }
+}
+
+@mixin _1400 {
+  @media (max-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin _900 {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+
+@mixin _640 {
+  @media (max-width: 640px) {
+    @content;
+  }
+}

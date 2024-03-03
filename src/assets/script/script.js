@@ -1,5 +1,3 @@
-
-
 const createTimerAppearance = timer => {
   const title = document.createElement('p');
   title.classList.add('block-one__text');
@@ -137,4 +135,37 @@ const setTimer = (gmt) => {
 
 window.addEventListener('DOMContentLoaded', () => {
   setTimer('+03');
+});
+
+
+const accordeonBtnsArr = document.querySelectorAll('.footer__accordeon-btn');
+const accordeonArrowsArr = document.querySelectorAll('.footer__accordeon-arrow');
+const accordeonListsArr = document.querySelectorAll('.footer__list');
+
+accordeonBtnsArr.forEach((btn, index) => {
+  btn.addEventListener('click', () => {
+    accordeonArrowsArr[index].classList.toggle('footer__accordeon-arrow_active');
+
+    accordeonListsArr[index].style.height = 
+      accordeonListsArr[index].classList.contains('footer__list_active') ? '' :
+      `${accordeonListsArr[index].scrollHeight}px`
+
+    accordeonListsArr[index].classList.toggle('footer__list_active');
+  });
+});
+
+
+
+
+window.addEventListener('resize', () => {
+  if (document.documentElement.scrollWidth > 640) {
+    accordeonListsArr.forEach(list => {
+      list.classList.remove('footer__list_active');
+      list.style.height = '';
+    });
+
+    accordeonArrowsArr.forEach(arrow => {
+      arrow.classList.remove('footer__accordeon-arrow_active');
+    });
+  }
 });

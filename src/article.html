@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ShopOnline</title>
     <link rel="stylesheet" href="css/index.css">
-    <link rel="preload" href="assets/fonts/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin/>
-    <link rel="preload" href="assets/fonts/Lato-Bold.woff2" as="font" type="font/woff2" crossorigin/>
-    <link rel="preload" href="assets/fonts/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin/>
+    <link rel="preload" href="assets/fonts/Lato-400.woff2" as="font" type="font/woff2" crossorigin/>
+    <link rel="preload" href="assets/fonts/Lato-700.woff2" as="font" type="font/woff2" crossorigin/>
+    <link rel="preload" href="assets/fonts/OpenSans-700.woff2" as="font" type="font/woff2" crossorigin/>
     <script defer src="js/script.js"></script>
 </head>
 <body>
@@ -17,7 +17,7 @@
 
     <div class="header__container container">
     
-      <a class="header__logo logo" href="#" aria-label="Логотип магазина ShopOnline">Shop<span class="logo_color_blue">Online</span></a>
+      <a class="header__logo logo" href="index.html" aria-label="Логотип магазина ShopOnline">Shop<span class="logo_color_blue">Online</span></a>
 
       <button class="header__menu-button" type="button">
 
@@ -148,7 +148,7 @@
           <div class="article__bottom">
             
             <a class="article__backlink" href="#">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="article__backlink-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_3971_618)">
               <path d="M21 11H6.83L10.41 7.41L9 6L3 12L9 18L10.41 16.59L6.83 13H21V11Z" fill="#2D2D2D"/>
               </g>
@@ -176,11 +176,15 @@
   <footer class="footer">
     <div class="footer__container container">
 
-      <a class="footer__logo logo" href="#" aria-label="Логотип магазина ShopOnline">Shop<span class="logo_color_blue">Online</span></a>
+      <a class="footer__logo logo" href="index.html" aria-label="Логотип магазина ShopOnline">Shop<span class="logo_color_blue">Online</span></a>
 
       <div class="footer__catalog">
 
-        <h3 class="footer__title">Каталог</h3>
+        <h3 class="footer__title"><button class="footer__accordeon-btn">Каталог
+          <svg class="footer__accordeon-arrow" width="15" height="6" viewBox="0 0 15 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.5 6L0.138784 0H14.8612L7.5 6Z" fill="white"/>
+          </svg>
+        </button></h3>
 
         <ul class="footer__list">
 
@@ -230,7 +234,11 @@
 
       <div class="footer__for-buyers">
 
-        <h3 class="footer__title">Покупателям</h3>
+        <h3 class="footer__title"><button class="footer__accordeon-btn">Покупателям
+          <svg class="footer__accordeon-arrow" width="15" height="6" viewBox="0 0 15 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.5 6L0.138784 0H14.8612L7.5 6Z" fill="white"/>
+          </svg>
+        </button></h3>
 
         <ul class="footer__list">
 

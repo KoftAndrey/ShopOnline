@@ -1,11 +1,13 @@
 {
   "name": "gulp-template",
   "version": "1.0.0",
-  "description": "gulp",
+  "description": "gulp + sass",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "gulp": "gulp base",
+    "build": "gulp build",
+    "clear": "gulp clear"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +16,8 @@
     "browser-sync": "^3.0.2",
     "del": "^7.1.0",
     "gulp": "^4.0.2",
-    "gulp-cssimport": "^7.0.0"
+    "gulp-cssimport": "^7.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.71.1"
   }
 }

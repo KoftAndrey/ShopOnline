@@ -1,0 +1,89 @@
+.pagination {
+  padding: 50px 0;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+
+  @include _1400 {
+    padding: 40px 0;
+  }
+
+  @include _900 {
+    padding: 25px 0;
+    align-items: center;
+  }
+
+  @include _640 {
+    padding: 20px 0;
+  }
+
+  &__arrow {
+    width: 37px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    color: var(--grey, #8f8f8f);
+    transition: color .2s ease;
+
+    &:hover {
+      color: var(--dark-blue, #3670c7);
+    }
+
+    @include _900 {
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  &__pages-list {
+    margin: 0 30px 0 30px;
+    display: flex;
+    gap: 6px;
+
+    @include _900 {
+      margin: 0 15px 0 15px;
+      gap: 10px;
+    }
+  }
+
+  &__page-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 4px;
+    border-color: var(--black, #2d2d2d);
+    border-style: solid;
+    border-width: 2px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 130%;
+    color: var(--black, #2d2d2d);
+    transition: color .2s ease, border-color .2s ease;
+
+    &:hover {
+      border-color: var(--dark-blue, #3670c7);
+      color: var(--dark-blue, #3670c7);
+    }
+
+    &_state_active {
+      border-color: var(--dark-blue, #3670c7);
+      color: var(--dark-blue, #3670c7);
+
+      &:hover {
+        border-color: #2058ac;
+        color: #2058ac;
+      }
+    }
+
+    @include _900 {
+      width: 20px;
+      height: 20px;
+      font-size: 12px;
+    }
+  }
+}
