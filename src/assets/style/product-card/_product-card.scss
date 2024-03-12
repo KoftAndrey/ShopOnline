@@ -22,13 +22,13 @@
     overflow: hidden;
     position: relative;
 
-    @include _900 {
+    @include low-mid-size {
       margin: 0 0 15px 0;
       height: 216px;
       border-radius: 12px;
     }
 
-    @include _640 {
+    @include min-size {
       margin: 0 0 9px 0;
       height: 130px;
     }
@@ -45,12 +45,12 @@
     align-items: center;
     gap: 28px;
 
-    @include _900 {
+    @include low-mid-size {
       margin: 0 0 10px 0;
       gap: 16px;
     }
 
-    @include _640 {
+    @include min-size {
       margin: 0 0 5px 0;
     }
   }
@@ -60,12 +60,12 @@
     line-height: 34px;
     font-weight: 700;
 
-    @include _900 {
+    @include low-mid-size {
       font-size: 22px;
       line-height: 26px;
     }
 
-    @include _640 {
+    @include min-size {
       font-size: 16px;
       line-height: 19px;
     }
@@ -77,12 +77,12 @@
     font-weight: 400;
     text-decoration: line-through;
 
-    @include _900 {
+    @include low-mid-size {
       font-size: 16px;
       line-height: 19px;
     }
 
-    @include _640 {
+    @include min-size {
       font-size: 12px;
       line-height: 14px;
     }
@@ -108,12 +108,12 @@
       transition: width 0.6s ease;
     }
 
-    @include _900 {
+    @include low-mid-size {
       font-size: 18px;
       line-height: 27px;
     }
 
-    @include _640 {
+    @include min-size {
       font-size: 12px;
       line-height: 18px;
     }

@@ -1,3 +1,4 @@
+// Promo timer
 const createTimerAppearance = timer => {
   const title = document.createElement('p');
   title.classList.add('block-one__text');
@@ -43,7 +44,6 @@ const createTimerAppearance = timer => {
     minParam: minBlock.parameter,
   };
 };
-
 
 const timer = (timer, deadline, gmt) => {
   const {
@@ -138,34 +138,65 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 
-const accordeonBtnsArr = document.querySelectorAll('.footer__accordeon-btn');
-const accordeonArrowsArr = document.querySelectorAll('.footer__accordeon-arrow');
-const accordeonListsArr = document.querySelectorAll('.footer__list');
+// Drop menu
+const menuBtn = document.querySelector('.header__menu-button');
+const menuBtnIcon = document.querySelector('.header__button-icon');
+const menuContent = document.querySelector('.header__menu-box');
+const menuOverlay = document.querySelector('.header__menu-overlay');
 
-accordeonBtnsArr.forEach((btn, index) => {
-  btn.addEventListener('click', () => {
-    accordeonArrowsArr[index].classList.toggle('footer__accordeon-arrow_active');
+menuBtn.addEventListener('click', () => {
+  menuBtnIcon.classList.toggle('header__button-icon_active');
 
-    accordeonListsArr[index].style.height = 
-      accordeonListsArr[index].classList.contains('footer__list_active') ? '' :
-      `${accordeonListsArr[index].scrollHeight}px`
+  if (menuContent.classList.contains('header__menu-box_active')) {
+    menuContent.style.height = '';
+    menuContent.classList.remove('header__menu-box_active');
+    menuOverlay.style.opacity = '0';
+    setTimeout(() => menuOverlay.classList.remove('header__menu-overlay_active'), 400);
+  } else {
+    menuOverlay.classList.add('header__menu-overlay_active');
+    menuOverlay.style.opacity = '1';
+    menuContent.style.height = `${menuContent.scrollHeight}px`;
+    menuContent.classList.add('header__menu-box_active');
+  }  
+});
 
-    accordeonListsArr[index].classList.toggle('footer__list_active');
-  });
+menuOverlay.addEventListener('click', e => {
+  if (e.target === menuOverlay || e.target.classList.contains('navigation-block__link')) {
+    menuBtnIcon.classList.remove('header__button-icon_active');
+    menuContent.classList.remove('header__menu-box_active');
+    menuContent.style.height = '';
+
+    setTimeout(() => menuOverlay.classList.remove('header__menu-overlay_active'), 400);
+  }
 });
 
 
+//Footer accordeon
+const accordeonBtnsArr = document.querySelectorAll('.navigation-block__accordeon-btn');
+const accordeonArrowsArr = document.querySelectorAll('.navigation-block__accordeon-arrow');
+const accordeonListsArr = document.querySelectorAll('.navigation-block__list');
 
+accordeonBtnsArr.forEach((btn, index) => {
+  btn.addEventListener('click', () => {
+    accordeonArrowsArr[index].classList.toggle('navigation-block__accordeon-arrow_active');
+
+    accordeonListsArr[index].style.height = 
+      accordeonListsArr[index].classList.contains('navigation-block__list_active') ? '' :
+      `${accordeonListsArr[index].scrollHeight}px`;
+
+    accordeonListsArr[index].classList.toggle('navigation-block__list_active');
+  });
+});
 
 window.addEventListener('resize', () => {
   if (document.documentElement.scrollWidth > 640) {
     accordeonListsArr.forEach(list => {
-      list.classList.remove('footer__list_active');
+      list.classList.remove('navigation-block__list_active');
       list.style.height = '';
     });
 
     accordeonArrowsArr.forEach(arrow => {
-      arrow.classList.remove('footer__accordeon-arrow_active');
+      arrow.classList.remove('navigation-block__accordeon-arrow_active');
     });
   }
 });

@@ -29,25 +29,25 @@ $light-grey: #E8E8E8;
        url('../assets/fonts/#{ $name }-#{ $weight }.woff') format('woff'),
 }
 
-@mixin _1700 {
+@mixin max-size {
   @media (max-width: 1700px) {
     @content;
   }
 }
 
-@mixin _1400 {
+@mixin up-mid-size {
   @media (max-width: 1400px) {
     @content;
   }
 }
 
-@mixin _900 {
+@mixin low-mid-size {
   @media (max-width: 900px) {
     @content;
   }
 }
 
-@mixin _640 {
+@mixin min-size {
   @media (max-width: 640px) {
     @content;
   }

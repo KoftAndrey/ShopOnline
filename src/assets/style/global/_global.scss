@@ -80,15 +80,15 @@ iframe {
   padding: 0 30px;
   margin: 0 auto;
 
-  @include _1400 {
+  @include up-mid-size {
     padding: 0 42px;
   }
   
-  @include _900 {
+  @include low-mid-size {
     padding: 0 34px;
   }
   
-  @include _640 {
+  @include min-size {
     padding: 0 20px;
   }
 }
@@ -104,7 +104,7 @@ iframe {
     color: var(--dark-blue, #3670c7);
   }
 
-  @include _900 {
+  @include low-mid-size {
     font-size: 26px;
     line-height: 35px;
   }

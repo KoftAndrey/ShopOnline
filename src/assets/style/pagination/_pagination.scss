@@ -4,16 +4,16 @@
   display: flex;
   align-items: flex-start;
 
-  @include _1400 {
+  @include up-mid-size {
     padding: 40px 0;
   }
 
-  @include _900 {
+  @include low-mid-size {
     padding: 25px 0;
     align-items: center;
   }
 
-  @include _640 {
+  @include min-size {
     padding: 20px 0;
   }
 
@@ -32,7 +32,7 @@
       color: var(--dark-blue, #3670c7);
     }
 
-    @include _900 {
+    @include low-mid-size {
       width: 28px;
       height: 28px;
     }
@@ -43,7 +43,7 @@
     display: flex;
     gap: 6px;
 
-    @include _900 {
+    @include low-mid-size {
       margin: 0 15px 0 15px;
       gap: 10px;
     }
@@ -80,7 +80,7 @@
       }
     }
 
-    @include _900 {
+    @include low-mid-size {
       width: 20px;
       height: 20px;
       font-size: 12px;

@@ -2,17 +2,17 @@
   padding: 63px 0 0 0;
   margin: 0 0 50px 0;
 
-  @include _1400 {
+  @include up-mid-size {
     padding: 30px 0 0 0;
     margin: 0 0 45px 0;
   }
 
-  @include _900 {
+  @include low-mid-size {
     padding: 25px 0 0 0;
     margin: 0 0 30px 0;
   }
 
-  @include _640 {
+  @include min-size {
     padding: 20px 0 0 0;
     margin: 0 0 35px 0;
   }
@@ -28,7 +28,7 @@
     ;
     gap: 60px;
 
-    @include _1400 {
+    @include up-mid-size {
       grid-template-rows: 314px 458px 458px 418px;
       grid-template-columns: repeat(2, 1fr);
       grid-template-areas: 
@@ -40,14 +40,14 @@
       gap: 24px;
     }
 
-    @include _900 {
+    @include low-mid-size {
       grid-template-rows: 280px repeat(8, 60px) 337px;
       grid-template-columns: repeat(9, 1fr);
       gap: 20px;
       grid-template-areas: none;
     }
 
-    @include _640 {
+    @include min-size {
       grid-template-rows: 340px 268px 280px 256px 280px 123px;
       grid-template-columns: repeat(2, 1fr);
     }
@@ -61,15 +61,15 @@
     position: relative;
     overflow: hidden;
 
-    @include _1400 {
+    @include up-mid-size {
       border-radius: 16px;
     }
 
-    @include _900 {
+    @include low-mid-size {
       border-radius: 12px;
     }
 
-    @include _640 {
+    @include min-size {
       border-radius: 8px;
     }
   }
@@ -89,11 +89,11 @@
     "card-bottom card-bottom"
     ;
 
-    @include _1400 {
+    @include up-mid-size {
       gap: 24px;
     }
 
-    @include _900 {
+    @include low-mid-size {
       gap: 20px;
     }
   }
@@ -108,11 +108,11 @@
     "card-bottom"
     ;
 
-    @include _1400 {
+    @include up-mid-size {
       gap: 24px;
     }
 
-    @include _900 {
+    @include low-mid-size {
       gap: 20px;
     }
   }
@@ -127,11 +127,11 @@
     "card-left card-bottom-right"
     ;
 
-    @include _1400 {
+    @include up-mid-size {
       gap: 24px;
     }
 
-    @include _900 {
+    @include low-mid-size {
       grid-template-rows: 140px auto;
       gap: 20px;
     }

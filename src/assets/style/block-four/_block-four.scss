@@ -5,11 +5,11 @@
   line-height: 130%;
   color: $text-white;
 
-  @include _1400 {
+  @include up-mid-size {
     font-size: 30px;
   }
 
-  @include _900 {
+  @include low-mid-size {
     grid-area: none;
     grid-row: 6 / 10;
     grid-column: 1 / 5;
@@ -17,7 +17,7 @@
     line-height: 120%;
   }
 
-  @include _640 {
+  @include min-size {
     grid-row: 4 / 5;
     grid-column: 1 / 3;
     font-size: 12px;
@@ -30,11 +30,11 @@
     grid-area: card-top;
     padding: 30px;
 
-    @include _1400 {
+    @include up-mid-size {
       padding: 20px;
     }
 
-    @include _640 {
+    @include min-size {
       padding: 16px 10px;
     }
   }
@@ -46,11 +46,11 @@
     grid-area: card-bottom;
     padding: 30px;
 
-    @include _1400 {
+    @include up-mid-size {
       padding: 20px;
     }
 
-    @include _640 {
+    @include min-size {
       padding: 16px 10px;
     }
   }
@@ -59,15 +59,15 @@
     position: relative;
     z-index: 2;
 
-    @include _1400 {
+    @include up-mid-size {
       max-width: 280px;
     }
 
-    @include _900 {
+    @include low-mid-size {
       max-width: 155px;
     }
 
-    @include _640 {
+    @include min-size {
       max-width: 100%;
     }
   }

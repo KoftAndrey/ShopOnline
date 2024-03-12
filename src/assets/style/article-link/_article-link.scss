@@ -4,16 +4,16 @@
   column-gap: 30px;
   height: 195px;
 
-  @include _1400 {
+  @include up-mid-size {
     column-gap: 20px;
     height: 140px;
   }
 
-  @include _900 {
+  @include low-mid-size {
     grid-template-columns: repeat(8, 1fr);
   }
 
-  @include _640 {
+  @include min-size {
     padding: 0 1px 0 0;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 13px;
@@ -26,11 +26,11 @@
     overflow: hidden;
     position: relative;
 
-    @include _1400 {
+    @include up-mid-size {
       border-radius: 16px;
     }
 
-    @include _640 {
+    @include min-size {
       grid-column: 1 / 2;
       border-radius: 8px;
     }
@@ -50,18 +50,18 @@
     text-decoration: none;
     transition: opacity 0.6s ease;
 
-    @include _1400 {
+    @include up-mid-size {
       padding: 5px 0 0 0;
       font-size: 30px;
       line-height: 120%;
     }
 
-    @include _900 {
+    @include low-mid-size {
       grid-column: 3 / 9;
       padding: 21px 0 0 0;
     }
 
-    @include _640 {
+    @include min-size {
       grid-column: 2 / 5;
       padding: 0;
       margin: 0 0 0 -6px;

@@ -2,11 +2,11 @@
   display: flex;
   gap: 38px;
 
-  @include _900 {
+  @include low-mid-size {
     gap: 48px;
   }
 
-  @include _640 {
+  @include min-size {
     gap: 23px;
   }
 
@@ -32,11 +32,11 @@
       cursor: default;
       position: absolute;
 
-      @include _900 {
+      @include low-mid-size {
         right: -33px;
       }
 
-      @include _640 {
+      @include min-size {
         width: 11px;
         height: 11px;
         right: -17px;
@@ -44,11 +44,11 @@
       }
     }
 
-    @include _900 {
+    @include low-mid-size {
       font-size: 14px;
     }
 
-    @include _640 {
+    @include min-size {
       font-size: 8px;
     }
   }

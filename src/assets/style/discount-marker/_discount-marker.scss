@@ -12,7 +12,7 @@
   text-align: center;
   border-radius: 50%;
 
-  @include _900 {
+  @include low-mid-size {
     width: 60px;
     height: 60px;
     padding: 16px 0 18px 0;
@@ -20,7 +20,7 @@
     line-height: 26px;
   }
 
-  @include _640 {
+  @include min-size {
     width: 40px;
     height: 40px;
     padding: 11px 0 13px 0;
@@ -32,12 +32,12 @@
     top: 20px;
     left: 20px;
 
-    @include _900 {
+    @include low-mid-size {
       top: 10px;
       left: 10px;
     }
 
-    @include _640 {
+    @include min-size {
       top: 6px;
       left: 6px;
     }
@@ -47,12 +47,12 @@
     bottom: 20px;
     right: 20px;
 
-    @include _900 {
+    @include low-mid-size {
       bottom: 10px;
       right: 10px;
     }
 
-    @include _640 {
+    @include min-size {
       bottom: 6px;
       right: 6px;
     }
@@ -62,12 +62,12 @@
     bottom: 20px;
     left: 20px;
 
-    @include _900 {
+    @include low-mid-size {
       bottom: 10px;
       left: 10px;
     }
 
-    @include _640 {
+    @include min-size {
       bottom: 6px;
       left: 6px;
     }

@@ -3,18 +3,18 @@
   font-size: 40px;
   line-height: 120%;
 
-  @include _1400 {
+  @include up-mid-size {
     font-size: 30px;
   }
 
-  @include _900 {
+  @include low-mid-size {
     grid-area: none;
     grid-row: 2 / 7;
     grid-column: 5 / 10;
     font-size: 16px;
   }
 
-  @include _640 {
+  @include min-size {
     grid-row: 3 / 4;
     grid-column: 1 / 3;
     font-size: 12px;
@@ -26,11 +26,11 @@
     align-items: start;
     padding: 22px 20px;
 
-    @include _1400 {
+    @include up-mid-size {
       padding: 22px;
     }
 
-    @include _900 {
+    @include low-mid-size {
       padding: 10px;
     }
   }
@@ -45,16 +45,16 @@
     z-index: 2;
     transition: color 0.2s ease, background-color 0.2s ease;
 
-    @include _1400 {
+    @include up-mid-size {
       padding: 29px 25px;
     }
 
-    @include _900 {
+    @include low-mid-size {
       padding: 16px 28px;
       border-radius: 12px;
     }
 
-    @include _640 {
+    @include min-size {
       padding: 9px 25px;
       text-align: center;
       border-radius: 8px;
@@ -65,15 +65,15 @@
     font-weight: 700;
     font-size: 56px;
 
-    @include _1400 {
+    @include up-mid-size {
       font-size: 40px;
     }
 
-    @include _900 {
+    @include low-mid-size {
       font-size: 26px;
     }
 
-    @include _640 {
+    @include min-size {
       font-size: 16px;
     }
   }

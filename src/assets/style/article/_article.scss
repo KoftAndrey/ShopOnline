@@ -5,17 +5,17 @@
     line-height: 130%;
     font-weight: 700;
 
-    @include _1400 {
+    @include up-mid-size {
       margin: 0 0 30px 0;
       font-size: 40px;
     }
 
-    @include _900 {
+    @include low-mid-size {
       margin: 0 0 20px 0;
       font-size: 28px;
     }
 
-    @include _640 {
+    @include min-size {
       margin: 0 0 10px 0;
       font-size: 18px;
     }
@@ -26,18 +26,18 @@
     font-size: 22px;
     line-height: 150%;
 
-    @include _1400 {
+    @include up-mid-size {
       margin: 0 0 20px 0;
       font-size: 18px;
     }
 
-    @include _900 {
+    @include low-mid-size {
       margin: 0 0 10px 0;
       font-size: 16px;
       line-height: 130%;
     }
 
-    @include _640 {
+    @include min-size {
       margin: 0 0 6px 0;
       font-size: 12px;
     }
@@ -49,11 +49,11 @@
     align-items: flex-end;
     margin: 150px 0 0 0;
 
-    @include _1400 {
+    @include up-mid-size {
       margin: 130px 0 0 0;
     }
 
-    @include _900 {
+    @include low-mid-size {
       margin: 120px 0 0 0;
     }
   }
@@ -62,11 +62,11 @@
     font-size: 22px;
     line-height: 150%;
 
-    @include _1400 {
+    @include up-mid-size {
       font-size: 18px;
     }
 
-    @include _640 {
+    @include min-size {
       font-size: 12px;
     }
   }
@@ -79,12 +79,12 @@
     font-weight: 700;
     transition: margin 0.2s ease, opacity 0.2s ease;
 
-    @include _1400 {
+    @include up-mid-size {
       align-items: center;
       font-size: 14px;
     }
 
-    @include _640 {
+    @include min-size {
       font-size: 10px;
     }
 
@@ -95,11 +95,11 @@
       .article__backlink-text {
         margin: 0 0 0 15px;
 
-        @include _1400 {
+        @include up-mid-size {
           margin: 0 0 0 9px;
         }
 
-        @include _640 {
+        @include min-size {
           margin: 0 0 0 10px;
         }
       }
@@ -107,7 +107,7 @@
   }
 
   &__backlink-arrow {
-    @include _640 {
+    @include min-size {
       width: 16px;
       height: 16px;
     }
@@ -118,11 +118,11 @@
     margin: 0 0 0 10px;
     transition: margin 0.2s ease;
 
-    @include _1400 {
+    @include up-mid-size {
       margin: 0 0 0 4px;
     }
 
-    @include _640 {
+    @include min-size {
       margin: 0 0 0 5px;
     }
   }
