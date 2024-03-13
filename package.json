@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "description": "gulp + sass",
   "main": "index.js",
+  "homepage": "https://koftandrey.github.io/ShopOnline/",
   "type": "module",
   "scripts": {
     "gulp": "gulp base",
     "build": "gulp build",
-    "clear": "gulp clear"
+    "clear": "gulp clear",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +21,7 @@
     "browser-sync": "^3.0.2",
     "critical": "^7.1.0",
     "del": "^7.1.0",
+    "gh-pages": "^6.1.1",
     "gulp": "^4.0.2",
     "gulp-avif": "^1.1.1",
     "gulp-clean-css": "^4.3.0",

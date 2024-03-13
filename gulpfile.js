@@ -21,6 +21,8 @@ import webpack from 'webpack';
 
 import { stream as critical } from 'critical';
 
+import ghpages from 'gh-pages';
+
 let dev = false;
 const prepros = true;
 
@@ -200,6 +202,12 @@ export const clear = (done) => {
 };
 
 
+// GH pages
+export const pages = async() => ghpages.publish('dist', {
+  repo: 'https://koftandrey.github.io/ShopOnline'
+});
+
+
 // run
 export const develop = async() => {
   dev = true;
@@ -208,5 +216,7 @@ export const develop = async() => {
 export const base = gulp.parallel(html, style, js, img, avif, webp, copy);
 
 export const build = gulp.series(clear, base, critCSS);
+
+export const deploy =  gulp.series(build, pages);
 
 export default gulp.series(develop, base, server);
