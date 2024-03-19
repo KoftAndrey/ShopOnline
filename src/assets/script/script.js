@@ -171,10 +171,10 @@ menuOverlay.addEventListener('click', e => {
 });
 
 
-//Footer accordeon
+// Footer accordeon
 const accordeonBtnsArr = document.querySelectorAll('.navigation-block__accordeon-btn');
 const accordeonArrowsArr = document.querySelectorAll('.navigation-block__accordeon-arrow');
-const accordeonListsArr = document.querySelectorAll('.navigation-block__list');
+const accordeonListsArr = document.querySelectorAll('.navigation-block__list_position_footer');
 
 accordeonBtnsArr.forEach((btn, index) => {
   btn.addEventListener('click', () => {
@@ -188,8 +188,15 @@ accordeonBtnsArr.forEach((btn, index) => {
   });
 });
 
+
+// Close all on screen resize
 window.addEventListener('resize', () => {
   if (document.documentElement.scrollWidth > 640) {
+    menuOverlay.classList.remove('header__menu-overlay_active');
+    menuBtnIcon.classList.remove('header__button-icon_active');
+    menuContent.classList.remove('header__menu-box_active');
+    menuContent.style.height = '';
+
     accordeonListsArr.forEach(list => {
       list.classList.remove('navigation-block__list_active');
       list.style.height = '';

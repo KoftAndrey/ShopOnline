@@ -28,6 +28,21 @@
     line-height: 16px;
   }
 
+  &_position_top-right {
+    top: 20px;
+    right: 20px;
+
+    @include low-mid-size {
+      top: 10px;
+      right: 10px;
+    }
+
+    @include min-size {
+      top: 6px;
+      right: 6px;
+    }
+  }
+
   &_position_top-left {
     top: 20px;
     left: 20px;

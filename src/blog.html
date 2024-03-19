@@ -33,11 +33,11 @@
 
       <button class="header__menu-button" type="button">
 
-        <div class="header__button-icon">
+        <span class="header__button-icon">
           <span></span>
           <span></span>
           <span></span>
-        </div>
+        </span>
 
         Меню
 
@@ -147,11 +147,7 @@
     
             <div class="header__catalog navigation-block">
     
-              <h3 class="navigation-block__title navigation-block__title_position_header"><button class="navigation-block__accordeon-btn navigation-block__accordeon-btn_theme_light">Каталог
-                <svg class="navigation-block__accordeon-arrow navigation-block__accordeon-arrow_position_header" width="15" height="6" viewBox="0 0 15 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7.5 6L0.138784 0H14.8612L7.5 6Z" fill="currentColor"/>
-                </svg>
-              </button></h3>
+              <h3 class="navigation-block__title navigation-block__title_position_header">Каталог</h3>
       
               <ul class="navigation-block__list navigation-block__list_position_header">
       
@@ -201,11 +197,7 @@
       
             <div class="header__for-buyers navigation-block">
       
-              <h3 class="navigation-block__title navigation-block__title_position_header"><button class="navigation-block__accordeon-btn navigation-block__accordeon-btn_theme_light">Покупателям
-                <svg class="navigation-block__accordeon-arrow navigation-block__accordeon-arrow_position_header" width="15" height="6" viewBox="0 0 15 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7.5 6L0.138784 0H14.8612L7.5 6Z" fill="currentColor"/>
-                </svg>
-              </button></h3>
+              <h3 class="navigation-block__title navigation-block__title_position_header">Покупателям</h3>
       
               <ul class="navigation-block__list navigation-block__list_position_header">
       
@@ -254,7 +246,7 @@
 
     <section class="articles">
 
-      <div class="articles__container container">
+      <div class="articles__container container grid-container">
 
         <div class="articles__breadcrumbs breadcrumbs">
           <a class="breadcrumbs__link" href="index.html">Главная</a>
@@ -567,17 +559,19 @@
   <footer class="footer">
     <div class="footer__container container">
 
-      <a class="footer__logo logo" href="index.html" aria-label="Логотип магазина ShopOnline">Shop<span class="logo_color_blue">Online</span></a>
+      <a class="footer__logo logo" href="index.html" aria-label="Логотип магазина ShopOnline">Shop<span 
+         class="logo_color_blue">Online</span></a>
 
       <div class="footer__catalog navigation-block">
 
-        <h3 class="navigation-block__title"><button class="navigation-block__accordeon-btn">Каталог
-          <svg class="navigation-block__accordeon-arrow" width="15" height="6" viewBox="0 0 15 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <h3 class="navigation-block__title"><button class="navigation-block__accordeon-btn" tabindex="-1">Каталог
+          <svg class="navigation-block__accordeon-arrow" width="15" height="6" viewBox="0 0 15 6" fill="none" 
+           xmlns="http://www.w3.org/2000/svg">
             <path d="M7.5 6L0.138784 0H14.8612L7.5 6Z" fill="white"/>
           </svg>
         </button></h3>
 
-        <ul class="navigation-block__list">
+        <ul class="navigation-block__list navigation-block__list_position_footer">
 
           <li class="navigation-block__item">
             <a class="navigation-block__link" href="#">Смартфоны</a>
@@ -625,13 +619,14 @@
 
       <div class="footer__for-buyers navigation-block">
 
-        <h3 class="navigation-block__title"><button class="navigation-block__accordeon-btn">Покупателям
-          <svg class="navigation-block__accordeon-arrow" width="15" height="6" viewBox="0 0 15 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <h3 class="navigation-block__title"><button class="navigation-block__accordeon-btn" tabindex="-1">Покупателям
+          <svg class="navigation-block__accordeon-arrow" width="15" height="6" viewBox="0 0 15 6" fill="none" 
+           xmlns="http://www.w3.org/2000/svg">
             <path d="M7.5 6L0.138784 0H14.8612L7.5 6Z" fill="white"/>
           </svg>
         </button></h3>
 
-        <ul class="navigation-block__list">
+        <ul class="navigation-block__list navigation-block__list_position_footer">
 
           <li class="navigation-block__item">
             <a class="navigation-block__link" href="#">Оплата заказа</a>

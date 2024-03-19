@@ -21,6 +21,8 @@ import webpack from 'webpack';
 
 import { stream as critical } from 'critical';
 
+import autoPrefixer from 'gulp-autoprefixer';
+
 import ghpages from 'gh-pages';
 
 let dev = false;
@@ -28,6 +30,8 @@ const prepros = true;
 
 const sass = gulpSass(sassPkg);
 
+
+// Webpack
 const webpackConf = {
   mode: dev ? 'development' : 'production',
   devtool: dev ? 'eval-source-map' : false,
@@ -49,6 +53,9 @@ if (!dev) {
     loader: 'babel-loader',
   });
 }
+/*
+
+*/
 
 
 // tasks
@@ -70,6 +77,7 @@ export const style = () => {
       .src('src/assets/style/**/*.scss')
       .pipe(gulpif(dev, sourcemaps.init()))
       .pipe(sass().on('error', sass.logError))
+      .pipe(autoPrefixer())
       .pipe(cleanCSS({
         2: {
           specialComments: 0
@@ -86,6 +94,7 @@ export const style = () => {
     .pipe(gulpCssimport({
       matchPattern: '*.css',
     }))
+    .pipe(autoPrefixer())
     .pipe(cleanCSS({
       2: {
         specialComments: 0

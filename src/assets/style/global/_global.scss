@@ -93,6 +93,25 @@ iframe {
   }
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  column-gap: 30px;
+
+  @include up-mid-size {
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 20px;
+  }
+
+  @include low-mid-size {
+    grid-template-columns: repeat(9, 1fr);
+  }
+
+  @include min-size {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .logo {
   font-family: 'OpenSans';
   font-weight: 700;
@@ -109,7 +128,7 @@ iframe {
     line-height: 35px;
   }
 
-  padding {
+  @include min-size {
     font-size: 18px;
     line-height: 25px;
   }

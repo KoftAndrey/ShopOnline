@@ -1,36 +1,16 @@
 .article-block {
-  &__breadcrumbs {
-    margin: 33px 0 40px 0;
-
-    @include up-mid-size {
-      margin: 10px 0 30px 0;
-    }
-
-    @include low-mid-size {
-      margin: 10px 0 25px 0;
-    }
-
-    @include min-size {
-      margin: 0 0 15px 0;
-    }
-  }
-  
   &__article {
-    padding: 40px 0 0 0;
     margin: 0 0 150px 0;
 
     @include up-mid-size {
-      padding: 30px 0 0 0;
       margin: 0 0 100px 0;
     }
 
     @include low-mid-size {
-      padding: 25px 0 0 0;
       margin: 0 0 80px 0;
     }
 
     @include min-size {
-      padding: 15px 0 0 0;
       margin: 0 0 50px 0;
     }
   }

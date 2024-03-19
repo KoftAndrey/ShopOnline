@@ -65,7 +65,7 @@
       line-height: 26px;
     }
 
-    @include min-size {
+    @media (max-width: 680px) {
       font-size: 16px;
       line-height: 19px;
     }
@@ -82,7 +82,7 @@
       line-height: 19px;
     }
 
-    @include min-size {
+    @media (max-width: 680px) {
       font-size: 12px;
       line-height: 14px;
     }
@@ -96,6 +96,10 @@
     font-weight: 400;
     position: relative;
     align-self: start;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 
     &::after {
       content: '';

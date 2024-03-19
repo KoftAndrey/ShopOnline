@@ -19,6 +19,7 @@ $light-grey: #E8E8E8;
 }
 
 // mixins
+// for fonts
 @mixin font($name, $weight) {
   font: {
     family: $name;
@@ -29,6 +30,7 @@ $light-grey: #E8E8E8;
        url('../assets/fonts/#{ $name }-#{ $weight }.woff') format('woff'),
 }
 
+// for media queries
 @mixin max-size {
   @media (max-width: 1700px) {
     @content;
